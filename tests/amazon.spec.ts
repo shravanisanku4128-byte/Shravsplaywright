@@ -67,9 +67,8 @@ test("Amazon Test Automation", async ({ page }) => {
   ]);
   await myPage.waitForLoadState();
   await page.close();
-  (await myPage.click("(//input[@id='add-to-cart-button'])")
+  await myPage.click("(//input[@id='add-to-cart-button'])")
    await myPage.waitForTimeout(5000);
-);
 });
  
 
