@@ -77,7 +77,7 @@ test("Amazon Test Automation", async ({ page }) => {
   await page.goto("https://www.amazon.in/");
   await expect(page.locator("#twotabsearchtextbox")).toBeVisible();
   await page.getByRole("searchbox", { name: "Search Amazon.in" }).fill("soap");
-  await page.getByRole("button", { name: "Go" }).click();
+  await page.locator("#nav-search-submit-button").click();
   await page.waitForTimeout(5000);
 });
 
