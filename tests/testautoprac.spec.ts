@@ -1,8 +1,10 @@
 import { test, expect } from '@playwright/test';
 test('Test Automation Practice', async ({ page }) => {
 await page.goto("https://testautomationpractice.blogspot.com/");
-await page.fill("#name", "Shravs");
-await page.fill("#email", "Shrav.sanku@gmail.com");
+//await page.fill("#name", "Shravs");
+await page.getByRole("textbox", { name: "name" }).fill("Shravs");
+await page.getByRole("textbox", { name: "Email" }).fill("Shrav.sanku@gmail.com");
+//await page.fill("#email", "Shrav.sanku@gmail.com");
 await page.fill("#phone", "1234567890");
 await page.fill("#textarea", "hyderabad");
 await page.fill("#Wikipedia1_wikipedia-search-input", "India");
