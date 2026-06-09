@@ -1,20 +1,20 @@
 import { test,expect,request } from '@playwright/test';
 //...fixture...
-// test('read color by index', async () => {
-//   const apihandling = await request.newContext();
-//   const res = await apihandling.get('https://api.restful-api.dev/objects');
+test('read color by index', async () => {
+  const apihandling = await request.newContext();
+  const res = await apihandling.get('https://api.restful-api.dev/objects');
  
-//   //response validation shoul be 200/201(if its post)
-//   expect(res.status()).toBe(200);//401.. wrong credentails... 403
+  //response validation shoul be 200/201(if its post)
+  expect(res.status()).toBe(200);//401.. wrong credentails... 403
   
 
-//   //Converting Json to body......
-//   const body = await res.json();
-//   console.log(body);
-//   console.log(body[0].data.color);
-//   console.log(body[1].name);
+  //Converting Json to body......
+  const body = await res.json();
+  console.log(body);
+  console.log(body[0].data.color);
+  console.log(body[1].name);
  
-// });
+});
 
 
 
