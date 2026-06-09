@@ -26,8 +26,9 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     launchOptions: {
-      slowMo: 1000, // slow down by 500ms
-      headless: false,
+     slowMo: 1000, // slow down by 500ms
+     args: ['--start-maximized'], // to start the browser in maximized mode
+    headless: false,
     },
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
