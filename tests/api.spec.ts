@@ -8,15 +8,12 @@ test('read color by index', async () => {
   expect(res.status()).toBe(200);//401.. wrong credentails... 403
   
 
-  //Converting Json to body......
+  //Converting Json to body...
   const body = await res.json();
   console.log(body);
   console.log(body[0].data.color);
-  console.log(body[1].name);
- 
+  console.log(body[1].name); 
 });
-//
- 
  
 test('create object', async () => {
   const api = await request.newContext();
